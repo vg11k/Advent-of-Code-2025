@@ -10,8 +10,14 @@ using namespace std;
 //static const string filename = "input.txt";
 static const string filename = "example.txt";
 
+static const bool verbose = true;
+
+string getCharAt(vector<string> s, int x, int y, int z) {
+    return s.at(y).substr(x, z);
+}
+
 string getCharAt(vector<string> s, int x, int y) {
-    return s.at(y).substr(x, 1);
+    return getCharAt(s,x,y,1);
 }
 
 void loopDoStuff(vector<string> input) {
